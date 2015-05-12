@@ -13,10 +13,10 @@ r_binary_packages:
 - sp
 - raster
 - RCurl
-- SSOAP
-- XMLSchema
 
 r_github_packages:
+- omegahat/SSOAP
+- omegahat/xmlschema
 - benmarwick/FedData
 
 # after_success:
