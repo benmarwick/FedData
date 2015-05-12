@@ -7,7 +7,7 @@ before_install:
 - sudo apt-get install aptitude 
 - sudo aptitude install gdal-bin libgdal-dev libgdal1-dev libproj-dev libgdal1h -y
 - sudo apt-get install libcurl4-openssl-dev
-- Rscript -e 'install.packages("rgdal")'
+- Rscript -e 'install.packages("rgdal", repos="http://cran.rstudio.com/")'
 
 r_binary_packages:
 - soilDB
