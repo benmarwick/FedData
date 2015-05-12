@@ -5,7 +5,7 @@ language: r
 before_install:
 - sudo apt-get install aptitude 
 - sudo aptitude install gdal-bin libgdal-dev libgdal1-dev libproj-dev libgdal1h -y
-- sudo apt-get install libcurl-dev
+- sudo apt-get install libcurl4-openssl-dev
 
 r_binary_packages:
 - rgdal
