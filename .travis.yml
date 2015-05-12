@@ -4,18 +4,17 @@ language: r
 
 before_install:
 - sudo apt-get install aptitude 
-- sudo aptitude install libgdal-dev -y
-- sudo aptitude install libproj-dev -y
-#- sudo aptitude install libgeos-dev -y
-- sudo apt-get install libcurl4-gnutls-dev
+- sudo aptitude install gdal-bin libgdal-dev libgdal1-dev libproj-dev libgdal1h -y
+- sudo apt-get install libcurl-dev
 
 r_binary_packages:
 - rgdal
-#- rgeos
 - soilDB
 - sp
 - raster
 - RCurl
+- SSOAP
+- XMLSchema
 
 r_github_packages:
 - benmarwick/FedData
