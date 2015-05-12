@@ -7,11 +7,11 @@ before_install:
 - sudo apt-get install aptitude 
 - sudo aptitude install libproj-dev gdal-bin libgdal1h-dev libgdal1h libgdal1-dev libgdal1 -y
 - sudo apt-get install libcurl4-openssl-dev
-- Rscript -e 'install.packages("rgdal", repos="http://cran.rstudio.com/")'
 - Rscript -e 'install.packages("SSOAP", repos="http://www.omegahat.org/R", type="source")'
 - Rscript -e 'install.packages("XMLSchema", repos="http://www.omegahat.org/R", type="source")'
 
 r_binary_packages:
+- rgdal
 - soilDB
 - sp
 - raster
