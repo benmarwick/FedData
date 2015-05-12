@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get install aptitude 
   - sudo aptitude install libgdal-dev -y
   - sudo aptitude install libproj-dev -y
-  - sudo apt-get install libgdal1-dev libproj-dev libcurl4-gnutls-dev
+  - sudo apt-get install libcurl4-gnutls-dev
 
 install:
   - ./travis-tool.sh install_aptget r-cran-rgdal r-cran-rgeos r-cran-soilDB r-cran-sp r-cran-raster r-cran-rcurl
