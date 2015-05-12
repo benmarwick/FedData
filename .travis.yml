@@ -8,6 +8,8 @@ before_install:
 - sudo aptitude install gdal-bin libgdal-dev libgdal1-dev libproj-dev libgdal1h -y
 - sudo apt-get install libcurl4-openssl-dev
 - Rscript -e 'install.packages("rgdal", repos="http://cran.rstudio.com/")'
+- Rscript -e 'install.packages("SSOAP", repos="http://www.omegahat.org/R", type="source")'
+- Rscript -e 'install.packages("XMLSchema", repos="http://www.omegahat.org/R", type="source")'
 
 r_binary_packages:
 - soilDB
@@ -16,8 +18,6 @@ r_binary_packages:
 - RCurl
 
 r_github_packages:
-- omegahat/SSOAP
-- omegahat/xmlschema
 - benmarwick/FedData
 
 # after_success:
