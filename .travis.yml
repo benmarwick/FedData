@@ -1,12 +1,19 @@
-# Sample .travis.yml for R projects from https://github.com/craigcitro/r-travis
-
 language: r
 
+sudo: required
+
+env:
+  global:
+    - CRAN: http://cran.rstudio.com
+    
 before_install:
-- sudo apt-get update -qq
-- sudo apt-get --purge remove libcurl4-openssl-dev libgdal1 postgresql-*                                         
-- sudo apt-get install aptitude 
-- sudo aptitude install libproj-dev gdal-bin libgdal1=1.8.0 libgdal-dev -y
+- sudo apt-get update
+# this works for my Ubuntu 14.04 desktop, but not for travis
+#- sudo apt-get install libproj-dev libgdal1-dev -y
+# from http://askubuntu.com/questions/206593/how-to-install-rgdal-on-ubuntu-12-10
+- sudo apt-get install aptitude # install aptitude as an alternative to apt-get
+- sudo aptitude install libgdal-dev -y # install the package (you may have to respond to queries here)
+- sudo aptitude install libproj-dev -y # install the proj.4 projection library
 - sudo apt-get install libcurl4-openssl-dev
 - Rscript -e 'install.packages("SSOAP", repos="http://www.omegahat.org/R", type="source")'
 - Rscript -e 'install.packages("XMLSchema", repos="http://www.omegahat.org/R", type="source")'
